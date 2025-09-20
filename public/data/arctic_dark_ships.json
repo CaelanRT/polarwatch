@@ -2,8 +2,8 @@
   "generated": "2025-09-20T16:00:00.000Z",
   "summary": {
     "images_analyzed": 4,
-    "total_ships": 12,
-    "dark_ships": 6,
+    "total_ships": 11,
+    "dark_ships": 5,
     "ais_ships": 6
   },
   "dark_ships": [
@@ -23,23 +23,6 @@
       "next_lat": 69.234812,
       "next_lon": -105.456234,
       "distance_km": 85.4
-    },
-    {
-      "lat": 70.567432,
-      "lon": -110.234123,
-      "confidence": 0.887,
-      "target_vessel": "NORTHERN GHOST",
-      "target_mmsi": 316098765,
-      "reason": "Distance jump: 450.7 km, Transponder disabled near territorial waters",
-      "image": "arctic_sat_002.jpg",
-      "gap_start_time": "2025-09-19T08:22:15Z",
-      "gap_end_time": "2025-09-20T19:45:33Z",
-      "status": "DARK_SHIP_CONFIRMED",
-      "last_lat": 70.123456,
-      "last_lon": -112.567890,
-      "next_lat": 70.567432,
-      "next_lon": -110.234123,
-      "distance_km": 450.7
     },
     {
       "lat": 68.123456,
