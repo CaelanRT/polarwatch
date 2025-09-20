@@ -168,7 +168,7 @@ function App() {
       {/* Top Header */}
       <header className="top-header">
         <div className="header-left">
-          <h1>Arctic Watch</h1>
+          <h1>Polar Watch</h1>
         </div>
         <div className="header-right">
           <span className="welcome-text">Welcome, User Name</span>
