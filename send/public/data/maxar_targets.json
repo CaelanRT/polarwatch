@@ -1,0 +1,182 @@
+[
+  {
+    "lat": 21.35224,
+    "lon": -157.946686,
+    "reason": "Gap: 85.1 hours, Impossible movement",
+    "mmsi": 368926310,
+    "vessel_name": "402",
+    "suspicious_score": 12,
+    "time": "2025-03-13T23:35:02"
+  },
+  {
+    "lat": 33.735031,
+    "lon": -118.270866,
+    "reason": "Gap: 52.4 hours",
+    "mmsi": 367471080,
+    "vessel_name": "ISABEL L",
+    "suspicious_score": 10,
+    "time": "2025-03-29T06:41:14"
+  },
+  {
+    "lat": 26.356409,
+    "lon": -82.39669,
+    "reason": "Gap: 53.0 hours",
+    "mmsi": 368353390,
+    "vessel_name": "LEEWAY",
+    "suspicious_score": 10,
+    "time": "2025-03-29T12:37:05"
+  },
+  {
+    "lat": 41.192822,
+    "lon": -73.957916,
+    "reason": "Gap: 55.4 hours",
+    "mmsi": 367496240,
+    "vessel_name": "PETER R WEISS",
+    "suspicious_score": 10,
+    "time": "2025-03-29T02:09:34"
+  },
+  {
+    "lat": 37.794128,
+    "lon": -122.378113,
+    "reason": "Gap: 53.1 hours",
+    "mmsi": 366971280,
+    "vessel_name": "BAY BREEZE",
+    "suspicious_score": 10,
+    "time": "2025-03-29T07:52:00"
+  },
+  {
+    "lat": 42.25404,
+    "lon": -70.919991,
+    "reason": "Gap: 55.9 hours",
+    "mmsi": 367367470,
+    "vessel_name": "ASTERIA",
+    "suspicious_score": 10,
+    "time": "2025-03-29T00:58:31"
+  },
+  {
+    "lat": 40.64275,
+    "lon": -74.070831,
+    "reason": "Gap: 52.0 hours",
+    "mmsi": 367000140,
+    "vessel_name": "SAMUEL I NEWHOUSE",
+    "suspicious_score": 10,
+    "time": "2025-03-29T02:17:27"
+  },
+  {
+    "lat": 40.636688,
+    "lon": -74.071823,
+    "reason": "Gap: 51.2 hours",
+    "mmsi": 368051770,
+    "vessel_name": "MICHAEL MILLER",
+    "suspicious_score": 10,
+    "time": "2025-03-29T03:38:48"
+  },
+  {
+    "lat": 37.880852,
+    "lon": -122.425919,
+    "reason": "Gap: 53.0 hours",
+    "mmsi": 366771550,
+    "vessel_name": "NAPA",
+    "suspicious_score": 10,
+    "time": "2025-03-29T07:37:42"
+  },
+  {
+    "lat": 26.456511,
+    "lon": -79.221153,
+    "reason": "Gap: 49.3 hours",
+    "mmsi": 377901123,
+    "vessel_name": "TROPIC LISSETTE",
+    "suspicious_score": 10,
+    "time": "2025-03-29T01:39:59"
+  },
+  {
+    "lat": 40.39959,
+    "lon": -80.617569,
+    "reason": "Gap: 53.7 hours",
+    "mmsi": 367057940,
+    "vessel_name": "CAPT DAN THOMAS",
+    "suspicious_score": 10,
+    "time": "2025-03-29T13:13:18"
+  },
+  {
+    "lat": 33.370098,
+    "lon": -91.100021,
+    "reason": "Gap: 51.2 hours",
+    "mmsi": 367567350,
+    "vessel_name": "PAULA FORTIER",
+    "suspicious_score": 10,
+    "time": "2025-03-29T20:05:59"
+  },
+  {
+    "lat": 40.771549,
+    "lon": -74.011452,
+    "reason": "Gap: 57.8 hours",
+    "mmsi": 366990570,
+    "vessel_name": "CAPT MARK SUMMERS",
+    "suspicious_score": 10,
+    "time": "2025-03-29T00:14:54"
+  },
+  {
+    "lat": 31.62726,
+    "lon": -91.396591,
+    "reason": "Gap: 49.6 hours",
+    "mmsi": 367377890,
+    "vessel_name": "STAN HUMPHREYS",
+    "suspicious_score": 10,
+    "time": "2025-03-29T12:13:27"
+  },
+  {
+    "lat": 36.84222,
+    "lon": -76.262688,
+    "reason": "Gap: 49.9 hours",
+    "mmsi": 367476850,
+    "vessel_name": "CAPT DALE",
+    "suspicious_score": 10,
+    "time": "2025-03-29T08:05:06"
+  },
+  {
+    "lat": 37.82806,
+    "lon": -122.384033,
+    "reason": "Gap: 52.3 hours",
+    "mmsi": 367776380,
+    "vessel_name": "SEQUOIA",
+    "suspicious_score": 10,
+    "time": "2025-03-29T07:09:52"
+  },
+  {
+    "lat": 21.316669,
+    "lon": -157.876526,
+    "reason": "Gap: 62.8 hours",
+    "mmsi": 368520000,
+    "vessel_name": "IMUA",
+    "suspicious_score": 10,
+    "time": "2025-03-29T01:09:24"
+  },
+  {
+    "lat": 26.156679,
+    "lon": -79.203491,
+    "reason": "Gap: 48.2 hours",
+    "mmsi": 309374000,
+    "vessel_name": "INDEPENDENCE OF SEAS",
+    "suspicious_score": 10,
+    "time": "2025-03-29T02:45:26"
+  },
+  {
+    "lat": 37.908192,
+    "lon": -122.361519,
+    "reason": "Gap: 52.7 hours",
+    "mmsi": 367391830,
+    "vessel_name": "PISCES",
+    "suspicious_score": 10,
+    "time": "2025-03-29T07:57:29"
+  },
+  {
+    "lat": 47.98283,
+    "lon": -122.2183,
+    "reason": "Gap: 66.3 hours",
+    "mmsi": 367024340,
+    "vessel_name": "FIDALGO",
+    "suspicious_score": 10,
+    "time": "2025-03-29T02:43:05"
+  }
+]
