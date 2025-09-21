@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ShipCard from './components/ShipCard';
 import DarkShipMap from './components/DarkShipMap';
 import 'leaflet/dist/leaflet.css';
 import './App.css';
@@ -7,7 +6,6 @@ import './App.css';
 function App() {
   const [darkShips, setDarkShips] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [selectedShip, setSelectedShip] = useState(null);
   const [mapView, setMapView] = useState('AIS'); // AIS, SAR, or SATELLITE
   const [currentView, setCurrentView] = useState('tracker'); // 'tracker' or 'dashboard'
@@ -28,137 +26,23 @@ function App() {
         response = await fetch('/data/dark_ship_report.json');
       }
 
-      if (!response.ok) {
-        // Use dummy Arctic data if no files found
-        const dummyData = createArcticDummyData();
-        setDarkShips(dummyData.dark_ships);
-        setLoading(false);
-        return;
-      }
-
       const data = await response.json();
       setDarkShips(data.dark_ships || []);
 
     } catch (err) {
-      console.log('No backend data found, using dummy Arctic data');
-      const dummyData = createArcticDummyData();
-      setDarkShips(dummyData.dark_ships);
+      console.log('Backend data failed.');
+      
     } finally {
       setLoading(false);
     }
   };
 
-  const createArcticDummyData = () => ({
-    dark_ships: [
-      {
-        lat: 69.2348,
-        lon: -105.4562,
-        confidence: 0.943,
-        target_vessel: "ARCTIC SHADOW",
-        target_mmsi: 316054321,
-        reason: "Gap: 72.3 hours in Northwest Passage shipping lane",
-        status: "DARK_SHIP_CONFIRMED",
-        gap_start_time: "2025-09-18T14:35:02Z",
-        gap_end_time: "2025-09-21T14:53:47Z",
-        last_lat: 69.8234,
-        last_lon: -107.2341,
-        next_lat: 69.2348,
-        next_lon: -105.4562,
-        distance_km: 185.4
-      },
-      {
-        lat: 70.1234,
-        lon: -108.7865,
-        confidence: 0.887,
-        target_vessel: "NORTHERN GHOST",
-        target_mmsi: 316098765,
-        reason: "Distance jump: 450.7 km, Transponder disabled in Beaufort Sea",
-        status: "DARK_SHIP_CONFIRMED",
-        gap_start_time: "2025-09-19T08:22:15Z",
-        gap_end_time: "2025-09-20T19:45:33Z",
-        last_lat: 71.4567,
-        last_lon: -112.3456,
-        next_lat: 70.1234,
-        next_lon: -108.7865,
-        distance_km: 450.7
-      },
-      {
-        lat: 68.7654,
-        lon: -140.2341,
-        confidence: 0.812,
-        target_vessel: "UNKNOWN VESSEL",
-        target_mmsi: 0,
-        reason: "Unidentified vessel detected in Beaufort Sea, no AIS response",
-        status: "ORPHAN_DETECTION",
-        gap_start_time: null,
-        gap_end_time: null
-      },
-      {
-        lat: 69.4567,
-        lon: -133.8901,
-        confidence: 0.756,
-        target_vessel: "ICE RUNNER",
-        target_mmsi: 316012345,
-        reason: "Gap: 48.7 hours, last seen near Tuktoyaktuk shipping lanes",
-        status: "DARK_SHIP_CONFIRMED",
-        gap_start_time: "2025-09-17T23:12:44Z",
-        gap_end_time: "2025-09-20T00:05:18Z",
-        last_lat: 69.1234,
-        last_lon: -135.6789,
-        next_lat: 69.4567,
-        next_lon: -133.8901,
-        distance_km: 215.3
-      },
-      {
-        lat: 74.0123,
-        lon: -110.5678,
-        confidence: 0.923,
-        target_vessel: "PHANTOM FISHER",
-        target_mmsi: 316087654,
-        reason: "Gap: 96.2 hours, impossible speed through Northwest Passage",
-        status: "DARK_SHIP_CONFIRMED",
-        gap_start_time: "2025-09-16T12:45:22Z",
-        gap_end_time: "2025-09-20T12:57:11Z",
-        last_lat: 72.8765,
-        last_lon: -115.4321,
-        next_lat: 74.0123,
-        next_lon: -110.5678,
-        distance_km: 523.8
-      },
-      {
-        lat: 68.3456,
-        lon: -125.6789,
-        confidence: 0.689,
-        target_vessel: "ARCTIC WANDERER",
-        target_mmsi: 316065432,
-        reason: "Transponder disabled for 38.4 hours in Amundsen Gulf",
-        status: "DARK_SHIP_CONFIRMED",
-        gap_start_time: "2025-09-19T16:33:55Z",
-        gap_end_time: "2025-09-21T06:57:12Z",
-        last_lat: 68.9876,
-        last_lon: -128.3456,
-        next_lat: 68.3456,
-        next_lon: -125.6789,
-        distance_km: 287.6
-      }
-    ]
-  });
 
   if (loading) {
     return (
       <div className="loading">
         <div className="loading-spinner"></div>
         <p>Loading Arctic dark ship detections...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="error">
-        <h1>Error Loading Dark Ship Data</h1>
-        <p>{error}</p>
-        <button onClick={loadDarkShipData}>Retry</button>
       </div>
     );
   }
@@ -212,7 +96,7 @@ function App() {
                 <div className="stat-card">
                   <h3>High Risk</h3>
                   <div className="stat-number">{darkShips.filter(s => s.confidence > 0.8).length}</div>
-                  <div className="stat-label">Confidence > 80%</div>
+                  <div className="stat-label">Confidence &gt; 80%</div>
                 </div>
 
                 <div className="stat-card">
